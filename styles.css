@@ -227,6 +227,10 @@ body {
     font-size: 40px;
     border: none;
     cursor: pointer;
+    color: var(--bg-color);
+}
+.dropbtn i{
+    color: var(--bg-color);
 }
 .dropdown-content {
     display: none;
@@ -401,9 +405,24 @@ body {
     margin-left: 10px;
    font-size: 2rem; 
 }
+
+@media only screen and (max-width: 1000px){
+    .logogi {
+        width: 7vw;
+        margin-right: 5px; /* Adicione um espaçamento entre a logo e o texto */
+    }
+}
+
 @media only screen and (max-width: 742px){
     .home-content h3{
         text-align: center;
+    }
+    .logogi {
+        width: 9vw;
+ 
+    }
+    .logo {
+        font-size: 1.7rem; /* Adicione um espaçamento entre a logo e o texto */
     }
 }
 
@@ -447,5 +466,20 @@ body {
 @media only screen and (max-width: 742px){
     .home-content h3{
         font-size: 5rem;
+    }
+}
+@media only screen and (max-width: 550px){
+    .logogi {
+        width: 11vw;
+
+    }
+    .logo {
+        font-size: 1.5rem; /* Adicione um espaçamento entre a logo e o texto */
+    }
+}
+@media only screen and (max-width: 450px){
+    .logogi {
+        width: 13vw;
+ 
     }
 }
