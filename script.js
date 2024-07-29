@@ -28,9 +28,22 @@ document.addEventListener('DOMContentLoaded', function () {
             } else {
                 filterPerfumes(filter);
             }
+            // Close the dropdown menu after selecting a filter
+            document.querySelector('.dropdown-content').style.display = 'none';
         });
     });
+
+    // Open the dropdown menu on hover
+    document.querySelector('.filter-dropdown').addEventListener('mouseover', () => {
+        document.querySelector('.dropdown-content').style.display = 'block';
+    });
+
+    // Close the dropdown menu when the mouse leaves the dropdown
+    document.querySelector('.filter-dropdown').addEventListener('mouseout', () => {
+        document.querySelector('.dropdown-content').style.display = 'none';
+    });
 });
+
 
 
 document.addEventListener('DOMContentLoaded', function() {
