@@ -1,0 +1,1637 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Título e icone da Página -->
+    <title>Gio Fragrâncias</title>
+    <link rel="website icon" type="png" href="imgs/logogi.png">
+    <!-- Conexão com o css e o import icones -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Sessão Cabeçalho -->
+    <header class="header">
+        <div class="logo-container">
+            <img class="logogi" src="./imgs/logogi.png" alt="">
+            <a href="#" class="logo">
+                <h1>Gio Fragrâncias</h1>
+            </a>
+        </div>
+    </header>
+
+    <!-- Sessão Home (Inicio) -->
+    <section class="home">
+        <div class="home-content">
+            <h3>Catálogo de Perfumes</h3>
+        </div>
+    </section>
+
+    <!-- Sessão About (sobre) -->
+    <section class="Sobre" id="Sobre">
+        <div class="sobre-content">
+            <h3>Sobre Nós</h3>
+            <p>Descubra a essência perfeita para cada biotipo: perfumes que realçam sua singularidade e elegância!</p>
+            <div class="social-media">
+                <a class="insta" href="https://www.instagram.com/giofragrancias/" target="_blank" style="--i:6;"><i
+                        class='bx bxl-instagram'></i></a>
+            </div>
+        </div>
+        <div class="sobre-img">
+            <img src="./imgs/perfume.png" alt="">
+        </div>
+    </section>
+
+    <section class="catalogo" id="Catalogo">
+        <div class="filter-dropdown">
+            <button class="dropbtn">
+                <i class='bx bx-filter-alt'></i>
+            </button>
+            <div class="dropdown-content" id="filters">
+                <button onclick="showAll()" class="filter-button" data-filter="todos">Todos</button>
+                <button onclick="filterPerfumes('feminino')" class="filter-button"
+                    data-filter="feminino">Feminino</button>
+                <button onclick="filterPerfumes('masculino')" class="filter-button"
+                    data-filter="masculino">Masculino</button>
+                <button onclick="filterPerfumes('amadeirado')" class="filter-button"
+                    data-filter="amadeirado">Amadeirados</button>
+                <button onclick="filterPerfumes('cítrico')" class="filter-button"
+                    data-filter="cítrico">Citricos</button>
+                <button onclick="filterPerfumes('floral')" class="filter-button" data-filter="floral">Florais</button>
+            </div>
+        </div>
+        <div class="catalogo-content">
+            <h1>Nosso Catálogo</h1>
+
+            <ul class="perfume-list">
+                <li class="perfume-item" data-id="1" data-genero="masculino" data-familia="amadeirado">
+                    <img src="./imgs/perfumefoto.png" alt="Perfume 1">
+                    <h3>ABSINTO</h3>
+                    <p>Valor: R$100,00. Ocasião: Noite. <br>Tipo: Amadeirado</p>
+                    <button class="open-modal" data-modal="modal-1">Ver detalhes</button>
+                </li>
+                <li class="perfume-item" data-genero="feminino" data-familia="floral">
+                    <img src="./imgs/perfumefoto.png" alt="Perfume 1">
+                    <h3>ACCORDES</h3>
+                    <p>Valor: R$120,00. Ocasião: Dia todo. <br>Tipo: Floral</p>
+                    <button class="open-modal" data-modal="modal-2" >Ver detalhes</button>
+                </li>
+                <li class="perfume-item" data-genero="feminino" data-familia="cítrico">
+                    <img src="./imgs/perfumefoto.png" alt="Perfume 1">
+                    <h3>ACQUA FRESCA</h3>
+                    <p>Valor: R$140,00. Ocasião: Noite. <br>Tipo: Cítrico</p>
+                    <button class="open-modal" data-modal="modal-3" >Ver detalhes</button>
+                </li>
+                <li class="perfume-item" data-genero="masculino" data-familia="amadeirado">
+                    <img src="./imgs/perfumefoto.png" alt="Perfume 1">
+                    <h3>ACQUA DI GIÓ</h3>
+                    <p>Valor: R$160,00. Ocasião: Dia todo. <br>Tipo: Amadeirado</p>
+                    <button class="open-modal" data-modal="modal-4" >Ver detalhes</button>
+                </li>
+                <li class="perfume-item" data-genero="feminino" data-familia="floral">
+                    <img src="./imgs/perfumefoto.png" alt="Perfume 1">
+                    <h3>ALFAZEMA</h3>
+                    <p>Valor: R$180,00. Ocasião: Noite. <br>Tipo: Floral</p>
+                    <button class="open-modal" data-modal="modal-5" >Ver detalhes</button>
+                </li>
+                <li class="perfume-item" data-genero="feminino" data-familia="cítrico">
+                    <img src="./imgs/perfumefoto.png" alt="Perfume 1">
+                    <h3>AMARIGE</h3>
+                    <p>Valor: R$200,00. Ocasião: Dia todo. <br>Tipo: Cítrico</p>
+                    <button class="open-modal" data-modal="modal-6" >Ver detalhes</button>
+                </li>
+                <li class="perfume-item" data-genero="feminino" data-familia="amadeirado" data-genero=""
+                    data-familia="amadeirado">
+                    <img src="./imgs/perfumefoto.png" alt="Perfume 1">
+                    <h3>ANAIS ANAIS</h3>
+                    <p>Valor: R$220,00. Ocasião: Noite. <br>Tipo: Amadeirado</p>
+                    <button class="open-modal" data-modal="modal-7" >Ver detalhes</button>
+                </li>
+                <li class="perfume-item" data-genero="feminino" data-familia="floral">
+                    <img src="./imgs/perfumefoto.png" alt="Perfume 1">
+                    <h3>ANGE OU DÉMON</h3>
+                    <p>Valor: R$240,00. Ocasião: Dia todo. <br>Tipo: Floral</p>
+                    <button class="open-modal" data-modal="modal-8" >Ver detalhes</button>
+                </li>
+                <li class="perfume-item" data-genero="feminino" data-familia="cítrico">
+                    <img src="./imgs/perfumefoto.png" alt="Perfume 1">
+                    <h3>ANGEL</h3>
+                    <p>Valor: R$260,00. Ocasião: Noite. <br>Tipo: Cítrico</p>
+                    <button class="open-modal" data-modal="modal-9" >Ver detalhes</button>
+                </li>
+                <li class="perfume-item" data-genero="masculino" data-familia="amadeirado">
+                    <img src="./imgs/perfumefoto.png" alt="Perfume 1">
+                    <h3>ARMANI DIAMONDS</h3>
+                    <p>Valor: R$280,00. Ocasião: Dia todo. <br>Tipo: Amadeirado</p>
+                    <button class="open-modal" data-modal="modal-10" >Ver detalhes</button>
+                </li>
+                <li class="perfume-item" data-genero="masculino" data-familia="floral">
+                    <img src="./imgs/perfumefoto.png" alt="Perfume 1">
+                    <h3>AZARRO</h3>
+                    <p>Valor: R$300,00. Ocasião: Noite. <br>Tipo: Floral</p>
+                    <button class="open-modal" data-modal="modal-11" >Ver detalhes</button>
+                </li>
+                <li class="perfume-item" data-genero="masculino" data-familia="cítrico">
+                    <img src="./imgs/perfumefoto.png" alt="Perfume 1">
+                    <h3>BLACK XS</h3>
+                    <p>Valor: R$320,00. Ocasião: Dia todo. <br>Tipo: Cítrico</p>
+                    <button class="open-modal" data-modal="modal-12" >Ver detalhes</button>
+                </li>
+                <li class="perfume-item" data-genero="masculino" data-familia="amadeirado">
+                    <img src="./imgs/perfumefoto.png" alt="Perfume 1">
+                    <h3>CAFÉ</h3>
+                    <p>Valor: R$340,00. Ocasião: Noite. <br>Tipo: Amadeirado</p>
+                    <button class="open-modal" data-modal="modal-13" >Ver detalhes</button>
+                </li>
+                <li class="perfume-item" data-genero="feminino" data-familia="floral">
+                    <img src="./imgs/perfumefoto.png" alt="Perfume 1">
+                    <h3>CAROLINA HERRERA</h3>
+                    <p>Valor: R$360,00. Ocasião: Dia todo. <br>Tipo: Floral</p>
+                    <button class="open-modal" data-modal="modal-14" >Ver detalhes</button>
+                </li>
+                <li class="perfume-item" data-genero="feminino" data-familia="cítrico">
+                    <img src="./imgs/perfumefoto.png" alt="Perfume 1">
+                    <h3>CH</h3>
+                    <p>Valor: R$380,00. Ocasião: Noite. <br>Tipo: Cítrico</p>
+                    <button class="open-modal" data-modal="modal-15" >Ver detalhes</button>
+                </li>
+                <li class="perfume-item" data-genero="masculino" data-familia="amadeirado">
+                    <img src="./imgs/perfumefoto.png" alt="Perfume 1">
+                    <h3>CHLOÉ</h3>
+                    <p>Valor: R$400,00. Ocasião: Dia todo. <br>Tipo: Amadeirado</p>
+                    <button class="open-modal" data-modal="modal-16" >Ver detalhes</button>
+                </li>
+                <li class="perfume-item" data-genero="feminino" data-familia="floral">
+                    <img src="./imgs/perfumefoto.png" alt="Perfume 1">
+                    <h3>CHANEL 5</h3>
+                    <p>Valor: R$420,00. Ocasião: Noite. <br>Tipo: Floral</p>
+                    <button class="open-modal" data-modal="modal-17" >Ver detalhes</button>
+                </li>
+                <li class="perfume-item" data-genero="masculino" data-familia="cítrico">
+                    <img src="./imgs/perfumefoto.png" alt="Perfume 1">
+                    <h3>COCO MADEMOISELLE</h3>
+                    <p>Valor: R$440,00. Ocasião: Dia todo. <br>Tipo: Cítrico</p>
+                    <button class="open-modal" data-modal="modal-18" >Ver detalhes</button>
+                </li>
+                <li class="perfume-item" data-genero="feminino" data-familia="amadeirado">
+                    <img src="./imgs/perfumefoto.png" alt="Perfume 1">
+                    <h3>COFFE WOMAN</h3>
+                    <p>Valor: R$460,00. Ocasião: Noite. <br>Tipo: Amadeirado</p>
+                    <button class="open-modal" data-modal="modal-19" >Ver detalhes</button>
+                </li>
+                <li class="perfume-item" data-genero="masculino" data-familia="floral">
+                    <img src="./imgs/perfumefoto.png" alt="Perfume 1">
+                    <h3>CKIN2U</h3>
+                    <p>Valor: R$480,00. Ocasião: Dia todo. <br>Tipo: Floral</p>
+                    <button class="open-modal" data-modal="modal-20" >Ver detalhes</button>
+                </li>
+                <li class="perfume-item" data-genero="feminino" data-familia="cítrico">
+                    <img src="./imgs/perfumefoto.png" alt="Perfume 21">
+                    <h3>212 WOMAN</h3>
+                    <p>Valor: R$500,00. Ocasião: Noite. <br>Tipo: Cítrico</p>
+                    <button class="open-modal" data-modal="modal-22" >Ver detalhes</button>
+                </li>
+                <li class="perfume-item" data-genero="masculino" data-familia="amadeirado">
+                    <img src="./imgs/perfumefoto.png" alt="Perfume 1">
+                    <h3>212 SEXY</h3>
+                    <p>Valor: R$520,00. Ocasião: Dia todo. <br>Tipo: Amadeirado</p>
+                    <button class="open-modal" data-modal="modal-23" >Ver detalhes</button>
+                </li>
+                <li class="perfume-item" data-genero="feminino" data-familia="floral">
+                    <img src="./imgs/perfumefoto.png" alt="Perfume 1">
+                    <h3>212 VIP ROSE</h3>
+                    <p>Valor: R$540,00. Ocasião: Noite. <br>Tipo: Floral</p>
+                    <button class="open-modal" data-modal="modal-24" >Ver detalhes</button>
+                </li>
+                <li class="perfume-item" data-genero="feminino" data-familia="cítrico">
+                    <img src="./imgs/perfumefoto.png" alt="Perfume 1">
+                    <h3>212 VIP FEMME</h3>
+                    <p>Valor: R$560,00. Ocasião: Dia todo. <br>Tipo: Cítrico</p>
+                    <button class="open-modal" data-modal="modal-25" >Ver detalhes</button>
+                </li>
+                <li class="perfume-item" data-genero="masculino" data-familia="amadeirado">
+                    <img src="./imgs/perfumefoto.png" alt="Perfume 1">
+                    <h3>DOLCE & GABANNA</h3>
+                    <p>Valor: R$580,00. Ocasião: Noite. <br>Tipo: Amadeirado</p>
+                    <button class="open-modal" data-modal="modal-25" >Ver detalhes</button>
+                </li>
+                <li class="perfume-item" data-genero="masculino" data-familia="floral">
+                    <img src="./imgs/perfumefoto.png" alt="Perfume 1">
+                    <h3>D&G LIGHT BLUE</h3>
+                    <p>Valor: R$600,00. Ocasião: Dia todo. <br>Tipo: Floral</p>
+                    <button class="open-modal" data-modal="modal-27" >Ver detalhes</button>
+                </li>
+                <li class="perfume-item" data-genero="masculino" data-familia="cítrico">
+                    <img src="./imgs/perfumefoto.png" alt="Perfume 1">
+                    <h3>DIESEL FUEL FOR LIFE</h3>
+                    <p>Valor: R$620,00. Ocasião: Noite. <br>Tipo: Cítrico</p>
+                    <button class="open-modal" data-modal="modal-28" >Ver detalhes</button>
+                </li>
+                <li class="perfume-item" data-genero="masculino" data-familia="amadeirado">
+                    <img src="./imgs/perfumefoto.png" alt="Perfume 1">
+                    <h3>DUNE DIOR</h3>
+                    <p>Valor: R$640,00. Ocasião: Dia todo. <br>Tipo: Amadeirado</p>
+                    <button class="open-modal" data-modal="modal-29" >Ver detalhes</button>
+                </li>
+                <li class="perfume-item" data-genero="masculino" data-familia="floral">
+                    <img src="./imgs/perfumefoto.png" alt="Perfume 1">
+                    <h3>EAU DE LACOSTE</h3>
+                    <p>Valor: R$660,00. Ocasião: Noite. <br>Tipo: Floral</p>
+                    <button class="open-modal" data-modal="modal-30" >Ver detalhes</button>
+                </li>
+                <li class="perfume-item" data-genero="feminino" data-familia="cítrico">
+                    <img src="./imgs/perfumefoto.png" alt="Perfume 1">
+                    <h3>EGEO</h3>
+                    <p>Valor: R$680,00. Ocasião: Dia todo. <br>Tipo: Cítrico</p>
+                    <button class="open-modal" data-modal="modal-31" >Ver detalhes</button>
+                </li>
+                <li class="perfume-item" data-genero="feminino" data-familia="amadeirado">
+                    <img src="./imgs/perfumefoto.png" alt="Perfume 1">
+                    <h3>EGEO CHOC</h3>
+                    <p>Valor: R$700,00. Ocasião: Noite. <br>Tipo: Amadeirado</p>
+                    <button class="open-modal" data-modal="modal-32" >Ver detalhes</button>
+                </li>
+                <li class="perfume-item" data-genero="feminino" data-familia="floral">
+                    <img src="./imgs/perfumefoto.png" alt="Perfume 1">
+                    <h3>EGEO DOLCE</h3>
+                    <p>Valor: R$720,00. Ocasião: Dia todo. <br>Tipo: Floral</p>
+                    <button class="open-modal" data-modal="modal-33" >Ver detalhes</button>
+                </li>
+                <li class="perfume-item" data-genero="feminino" data-familia="cítrico">
+                    <img src="./imgs/perfumefoto.png" alt="Perfume 1">
+                    <h3>ETERNITY</h3>
+                    <p>Valor: R$740,00. Ocasião: Noite. <br>Tipo: Cítrico</p>
+                    <button class="open-modal" data-modal="modal-34" >Ver detalhes</button>
+                </li>
+                <li class="perfume-item" data-genero="feminino" data-familia="amadeirado">
+                    <img src="./imgs/perfumefoto.png" alt="Perfume 1">
+                    <h3>ESSENCIAL</h3>
+                    <p>Valor: R$760,00. Ocasião: Dia todo. <br>Tipo: Amadeirado</p>
+                    <button class="open-modal" data-modal="modal-35" >Ver detalhes</button>
+                </li>
+                <li class="perfume-item" data-genero="feminino" data-familia="floral">
+                    <img src="./imgs/perfumefoto.png" alt="Perfume 1">
+                    <h3>EUPHORIA</h3>
+                    <p>Valor: R$780,00. Ocasião: Noite. <br>Tipo: Floral</p>
+                    <button class="open-modal" data-modal="modal-36" >Ver detalhes</button>
+                </li>
+                <li class="perfume-item" data-genero="feminino" data-familia="cítrico">
+                    <img src="./imgs/perfumefoto.png" alt="Perfume 1">
+                    <h3>FANTASY</h3>
+                    <p>Valor: R$800,00. Ocasião: Dia todo. <br>Tipo: Cítrico</p>
+                    <button class="open-modal" data-modal="modal-37" >Ver detalhes</button>
+                </li>
+                <li class="perfume-item" data-genero="feminino" data-familia="amadeirado">
+                    <img src="./imgs/perfumefoto.png" alt="Perfume 1">
+                    <h3>FLORATTA</h3>
+                    <p>Valor: R$820,00. Ocasião: Noite. <br>Tipo: Amadeirado</p>
+                    <button class="open-modal" data-modal="modal-38" >Ver detalhes</button>
+                </li>
+                <li class="perfume-item" data-genero="feminino" data-familia="floral">
+                    <img src="./imgs/perfumefoto.png" alt="Perfume 1">
+                    <h3>FLORATTA IN BLUE</h3>
+                    <p>Valor: R$840,00. Ocasião: Dia todo. <br>Tipo: Floral</p>
+                    <button class="open-modal" data-modal="modal-39" >Ver detalhes</button>
+                </li>
+                <li class="perfume-item" data-genero="feminino" data-familia="cítrico">
+                    <img src="./imgs/perfumefoto.png" alt="Perfume 1">
+                    <h3>FLORATTA IN GOLD</h3>
+                    <p>Valor: R$860,00. Ocasião: Noite. <br>Tipo: Cítrico</p>
+                    <button class="open-modal" data-modal="modal-40" >Ver detalhes</button>
+                </li>
+                <li class="perfume-item" data-genero="feminino" data-familia="amadeirado">
+                    <img src="./imgs/perfumefoto.png" alt="Perfume 1">
+                    <h3>FLOWER BY KENZO</h3>
+                    <p>Valor: R$880,00. Ocasião: Dia todo. <br>Tipo: Amadeirado</p>
+                    <button class="open-modal" data-modal="modal-41" >Ver detalhes</button>
+                </li>
+                <li class="perfume-item" data-genero="feminino" data-familia="floral">
+                    <img src="./imgs/perfumefoto.png" alt="Perfume 1">
+                    <h3>GABRIELA SABATINI</h3>
+                    <p>Valor: R$900,00. Ocasião: Noite. <br>Tipo: Floral</p>
+                    <button class="open-modal" data-modal="modal-42" >Ver detalhes</button>
+                </li>
+                <li class="perfume-item" data-genero="feminino" data-familia="cítrico">
+                    <img src="./imgs/perfumefoto.png" alt="Perfume 1">
+                    <h3>GLAMOUR</h3>
+                    <p>Valor: R$920,00. Ocasião: Dia todo. <br>Tipo: Cítrico</p>
+                    <button class="open-modal" data-modal="modal-43" >Ver detalhes</button>
+                </li>
+                <li class="perfume-item" data-genero="feminino" data-familia="amadeirado">
+                    <img src="./imgs/perfumefoto.png" alt="Perfume 1">
+                    <h3>GOOD GIRL</h3>
+                    <p>Valor: R$940,00. Ocasião: Noite. <br>Tipo: Amadeirado</p>
+                    <button class="open-modal" data-modal="modal-44" >Ver detalhes</button>
+                </li>
+                <li class="perfume-item" data-genero="feminino" data-familia="floral">
+                    <img src="./imgs/perfumefoto.png" alt="Perfume 1">
+                    <h3>HIPNOTIC POISON</h3>
+                    <p>Valor: R$960,00. Ocasião: Dia todo. <br>Tipo: Floral</p>
+                    <button class="open-modal" data-modal="modal-45" >Ver detalhes</button>
+                </li>
+                <li class="perfume-item" data-genero="feminino" data-familia="cítrico">
+                    <img src="./imgs/perfumefoto.png" alt="Perfume 1">
+                    <h3>HYPNOSE</h3>
+                    <p>Valor: R$980,00. Ocasião: Noite. <br>Tipo: Cítrico</p>
+                    <button class="open-modal" data-modal="modal-46" >Ver detalhes</button>
+                </li>
+                <li class="perfume-item" data-genero="feminino" data-familia="amadeirado">
+                    <img src="./imgs/perfumefoto.png" alt="Perfume 1">
+                    <h3>HUMOR CHOCOLATE</h3>
+                    <p>Valor: R$1000,00. Ocasião: Dia todo. <br>Tipo: Amadeirado</p>
+                    <button class="open-modal" data-modal="modal-47" >Ver detalhes</button>
+                </li>
+                <li class="perfume-item" data-genero="feminino" data-familia="floral">
+                    <img src="./imgs/perfumefoto.png" alt="Perfume 1">
+                    <h3>INAMORATA</h3>
+                    <p>Valor: R$1020,00. Ocasião: Noite. <br>Tipo: Floral</p>
+                    <button class="open-modal" data-modal="modal-48" >Ver detalhes</button>
+                </li>
+                <li class="perfume-item" data-genero="feminino" data-familia="cítrico">
+                    <img src="./imgs/perfumefoto.png" alt="Perfume 1">
+                    <h3>INSENSATEZ</h3>
+                    <p>Valor: R$1040,00. Ocasião: Dia todo. <br>Tipo: Cítrico</p>
+                    <button class="open-modal" data-modal="modal-49" >Ver detalhes</button>
+                </li>
+                <li class="perfume-item" data-genero="feminino" data-familia="amadeirado">
+                    <img src="./imgs/perfumefoto.png" alt="Perfume 1">
+                    <h3>J'ADORE JASMIM</h3>
+                    <p>Valor: R$1060,00. Ocasião: Noite. <br>Tipo: Amadeirado</p>
+                    <button class="open-modal" data-modal="modal-50" >Ver detalhes</button>
+                </li>
+                <li class="perfume-item" data-genero="feminino" data-familia="floral">
+                    <img src="./imgs/perfumefoto.png" alt="Perfume 1">
+                    <h3>JEAN PAUL GAUTIER</h3>
+                    <p>Valor: R$1080,00. Ocasião: Dia todo. <br>Tipo: Floral</p>
+                    <button class="open-modal" data-modal="modal-51" >Ver detalhes</button>
+                </li>
+                <li class="perfume-item" data-genero="feminino" data-familia="cítrico">
+                    <img src="./imgs/perfumefoto.png" alt="Perfume 1">
+                    <h3>JOOP! FOR WOMAN</h3>
+                    <p>Valor: R$1100,00. Ocasião: Noite. <br>Tipo: Cítrico</p>
+                    <button class="open-modal" data-modal="modal-52" >Ver detalhes</button>
+                </li>
+                <li class="perfume-item" data-genero="feminino" data-familia="amadeirado">
+                    <img src="./imgs/perfumefoto.png" alt="Perfume 1">
+                    <h3>KAIAK KENZO WORLD</h3>
+                    <p>Valor: R$1120,00. Ocasião: Dia todo. <br>Tipo: Amadeirado</p>
+                    <button class="open-modal" data-modal="modal-53" >Ver detalhes</button>
+                </li>
+                <li class="perfume-item" data-genero="feminino" data-familia="floral">
+                    <img src="./imgs/perfumefoto.png" alt="Perfume 1">
+                    <h3>KRISKA</h3>
+                    <p>Valor: R$1140,00. Ocasião: Noite. <br>Tipo: Floral</p>
+                    <button class="open-modal" data-modal="modal-54" >Ver detalhes</button>
+                </li>
+                <li class="perfume-item" data-genero="feminino" data-familia="cítrico">
+                    <img src="./imgs/perfumefoto.png" alt="Perfume 1">
+                    <h3>LADY MILLION</h3>
+                    <p>Valor: R$1160,00. Ocasião: Dia todo. <br>Tipo: Cítrico</p>
+                    <button class="open-modal" data-modal="modal-55" >Ver detalhes</button>
+                </li>
+                <li class="perfume-item" data-genero="feminino" data-familia="amadeirado">
+                    <img src="./imgs/perfumefoto.png" alt="Perfume 1">
+                    <h3>LAGUNA</h3>
+                    <p>Valor: R$1180,00. Ocasião: Noite. <br>Tipo: Amadeirado</p>
+                    <button class="open-modal" data-modal="modal-56" >Ver detalhes</button>
+                </li>
+                <li class="perfume-item" data-genero="feminino" data-familia="floral">
+                    <img src="./imgs/perfumefoto.png" alt="Perfume 1">
+                    <h3>LA VIE EST BELLE</h3>
+                    <p>Valor: R$1200,00. Ocasião: Dia todo. <br>Tipo: Floral</p>
+                    <button class="open-modal" data-modal="modal-57" >Ver detalhes</button>
+                </li>
+                <li class="perfume-item" data-genero="feminino" data-familia="cítrico">
+                    <img src="./imgs/perfumefoto.png" alt="Perfume 1">
+                    <h3>LANUIT TRÈSOR</h3>
+                    <p>Valor: R$1220,00. Ocasião: Noite. <br>Tipo: Cítrico</p>
+                    <button class="open-modal" data-modal="modal-58" >Ver detalhes</button>
+                </li>
+                <li class="perfume-item" data-genero="feminino" data-familia="amadeirado">
+                    <img src="./imgs/perfumefoto.png" alt="Perfume 1">
+                    <h3>L'EXTASE C. DE ROSE</h3>
+                    <p>Valor: R$1240,00. Ocasião: Dia todo. <br>Tipo: Amadeirado</p>
+                    <button class="open-modal" data-modal="modal-59" >Ver detalhes</button>
+                </li>
+                <li class="perfume-item" data-genero="feminino" data-familia="floral">
+                    <img src="./imgs/perfumefoto.png" alt="Perfume 1">
+                    <h3>LILY ESSENCE</h3>
+                    <p>Valor: R$1260,00. Ocasião: Noite. <br>Tipo: Floral</p>
+                    <button class="open-modal" data-modal="modal-60" >Ver detalhes</button>
+                </li>
+                <li class="perfume-item" data-genero="feminino" data-familia="cítrico">
+                    <img src="./imgs/perfumefoto.png" alt="Perfume 1">
+                    <h3>LINDA INSPIRAÇÃO</h3>
+                    <p>Valor: R$1280,00. Ocasião: Dia todo. <br>Tipo: Cítrico</p>
+                    <button class="open-modal" data-modal="modal-61" >Ver detalhes</button>
+                </li>
+                <li class="perfume-item" data-genero="feminino" data-familia="amadeirado">
+                    <img src="./imgs/perfumefoto.png" alt="Perfume 1">
+                    <h3>LOLITA LEMPICKA</h3>
+                    <p>Valor: R$1300,00. Ocasião: Noite. <br>Tipo: Amadeirado</p>
+                    <button class="open-modal" data-modal="modal-62" >Ver detalhes</button>
+                </li>
+                <li class="perfume-item" data-genero="feminino" data-familia="floral">
+                    <img src="./imgs/perfumefoto.png" alt="Perfume 1">
+                    <h3>LOU LOU</h3>
+                    <p>Valor: R$1320,00. Ocasião: Dia todo. <br>Tipo: Floral</p>
+                    <button class="open-modal" data-modal="modal-63" >Ver detalhes</button>
+                </li>
+                <li class="perfume-item" data-genero="feminino" data-familia="cítrico">
+                    <img src="./imgs/perfumefoto.png" alt="Perfume 1">
+                    <h3>MADEIRA DO ORIENTE</h3>
+                    <p>Valor: R$1340,00. Ocasião: Noite. <br>Tipo: Cítrico</p>
+                    <button class="open-modal" data-modal="modal-64" >Ver detalhes</button>
+                </li>
+                <li class="perfume-item" data-genero="feminino" data-familia="amadeirado">
+                    <img src="./imgs/perfumefoto.png" alt="Perfume 1">
+                    <h3>MADEMOISELLE</h3>
+                    <p>Valor: R$1360,00. Ocasião: Dia todo. <br>Tipo: Amadeirado</p>
+                    <button class="open-modal" data-modal="modal-65" >Ver detalhes</button>
+                </li>
+                <li class="perfume-item" data-genero="feminino" data-familia="floral">
+                    <img src="./imgs/perfumefoto.png" alt="Perfume 1">
+                    <h3>MANIFESTO</h3>
+                    <p>Valor: R$1380,00. Ocasião: Noite. <br>Tipo: Floral</p>
+                    <button class="open-modal" data-modal="modal-66" >Ver detalhes</button>
+                </li>
+                <li class="perfume-item" data-genero="feminino" data-familia="cítrico">
+                    <img src="./imgs/perfumefoto.png" alt="Perfume 1">
+                    <h3>MISS DIOR</h3>
+                    <p>Valor: R$1400,00. Ocasião: Dia todo. <br>Tipo: Cítrico</p>
+                    <button class="open-modal" data-modal="modal-67" >Ver detalhes</button>
+                </li>
+                <li class="perfume-item" data-genero="feminino" data-familia="amadeirado">
+                    <img src="./imgs/perfumefoto.png" alt="Perfume 1">
+                    <h3>NATURA UNA</h3>
+                    <p>Valor: R$1420,00. Ocasião: Noite. <br>Tipo: Amadeirado</p>
+                    <button class="open-modal" data-modal="modal-68" >Ver detalhes</button>
+                </li>
+                <li class="perfume-item" data-genero="feminino" data-familia="floral">
+                    <img src="./imgs/perfumefoto.png" alt="Perfume 1">
+                    <h3>NINA RICCI</h3>
+                    <p>Valor: R$1440,00. Ocasião: Dia todo. <br>Tipo: Floral</p>
+                    <button class="open-modal" data-modal="modal-69" >Ver detalhes</button>
+                </li>
+                <li class="perfume-item" data-genero="feminino" data-familia="cítrico">
+                    <img src="./imgs/perfumefoto.png" alt="Perfume 1">
+                    <h3>OLYMPÊA</h3>
+                    <p>Valor: R$1460,00. Ocasião: Noite. <br>Tipo: Cítrico</p>
+                    <button class="open-modal" data-modal="modal-70" >Ver detalhes</button>
+                </li>
+                <li class="perfume-item" data-genero="feminino" data-familia="amadeirado">
+                    <img src="./imgs/perfumefoto.png" alt="Perfume 1">
+                    <h3>OLYMPÊA ACQUA</h3>
+                    <p>Valor: R$1480,00. Ocasião: Dia todo. <br>Tipo: Amadeirado</p>
+                    <button class="open-modal" data-modal="modal-71" >Ver detalhes</button>
+                </li>
+                <li class="perfume-item" data-genero="feminino" data-familia="floral">
+                    <img src="./imgs/perfumefoto.png" alt="Perfume 1">
+                    <h3>PALOMA PICASSO</h3>
+                    <p>Valor: R$1500,00. Ocasião: Noite. <br>Tipo: Floral</p>
+                    <button class="open-modal" data-modal="modal-72" >Ver detalhes</button>
+                </li>
+                <li class="perfume-item" data-genero="feminino" data-familia="cítrico">
+                    <img src="./imgs/perfumefoto.png" alt="Perfume 1">
+                    <h3>POISON</h3>
+                    <p>Valor: R$1520,00. Ocasião: Dia todo. <br>Tipo: Cítrico</p>
+                    <button class="open-modal" data-modal="modal-73" >Ver detalhes</button>
+                </li>
+                <li class="perfume-item" data-genero="feminino" data-familia="amadeirado">
+                    <img src="./imgs/perfumefoto.png" alt="Perfume 1">
+                    <h3>POISON GIRL</h3>
+                    <p>Valor: R$1540,00. Ocasião: Noite. <br>Tipo: Amadeirado</p>
+                    <button class="open-modal" data-modal="modal-74" >Ver detalhes</button>
+                </li>
+                <li class="perfume-item" data-genero="feminino" data-familia="floral">
+                    <img src="./imgs/perfumefoto.png" alt="Perfume 1">
+                    <h3>PRADA</h3>
+                    <p>Valor: R$1560,00. Ocasião: Dia todo. <br>Tipo: Floral</p>
+                    <button class="open-modal" data-modal="modal-75" >Ver detalhes</button>
+                </li>
+                <li class="perfume-item" data-genero="feminino" data-familia="cítrico">
+                    <img src="./imgs/perfumefoto.png" alt="Perfume 1">
+                    <h3>PRADA CANDY</h3>
+                    <p>Valor: R$1580,00. Ocasião: Noite. <br>Tipo: Cítrico</p>
+                    <button class="open-modal" data-modal="modal-76" >Ver detalhes</button>
+                </li>
+                <li class="perfume-item" data-genero="feminino" data-familia="amadeirado">
+                    <img src="./imgs/perfumefoto.png" alt="Perfume 1">
+                    <h3>ROSAS</h3>
+                    <p>Valor: R$1600,00. Ocasião: Dia todo. <br>Tipo: Amadeirado</p>
+                    <button class="open-modal" data-modal="modal-77" >Ver detalhes</button>
+                </li>
+                <li class="perfume-item" data-genero="feminino" data-familia="floral">
+                    <img src="./imgs/perfumefoto.png" alt="Perfume 1">
+                    <h3>SCANDALL</h3>
+                    <p>Valor: R$1620,00. Ocasião: Noite. <br>Tipo: Floral</p>
+                    <button class="open-modal" data-modal="modal-78" >Ver detalhes</button>
+                </li>
+                <li class="perfume-item" data-genero="masculino" data-familia="cítrico">
+                    <img src="./imgs/perfumefoto.png" alt="Perfume 1">
+                    <h3>ABERCROMBIE ACQUA D'GIÓ</h3>
+                    <p>Valor: R$1640,00. Ocasião: Dia todo. <br>Tipo: Cítrico</p>
+                    <button class="open-modal" data-modal="modal-79" >Ver detalhes</button>
+                </li>
+                <li class="perfume-item" data-genero="masculino" data-familia="amadeirado">
+                    <img src="./imgs/perfumefoto.png" alt="Perfume 1">
+                    <h3>ALLURE</h3>
+                    <p>Valor: R$1660,00. Ocasião: Noite. <br>Tipo: Amadeirado</p>
+                    <button class="open-modal" data-modal="modal-80" >Ver detalhes</button>
+                </li>
+                <li class="perfume-item" data-genero="masculino" data-familia="floral">
+                    <img src="./imgs/perfumefoto.png" alt="Perfume 1">
+                    <h3>ALLURE HOMME SPORT</h3>
+                    <p>Valor: R$1680,00. Ocasião: Dia todo. <br>Tipo: Floral</p>
+                    <button class="open-modal" data-modal="modal-81" >Ver detalhes</button>
+                </li>
+                <li class="perfume-item" data-genero="masculino" data-familia="cítrico">
+                    <img src="./imgs/perfumefoto.png" alt="Perfume 1">
+                    <h3>ANIMALE</h3>
+                    <p>Valor: R$1700,00. Ocasião: Noite. <br>Tipo: Cítrico</p>
+                    <button class="open-modal" data-modal="modal-82" >Ver detalhes</button>
+                </li>
+                <li class="perfume-item" data-genero="masculino" data-familia="amadeirado">
+                    <img src="./imgs/perfumefoto.png" alt="Perfume 1">
+                    <h3>ARMANI CODE</h3>
+                    <p>Valor: R$1720,00. Ocasião: Dia todo. <br>Tipo: Amadeirado</p>
+                    <button class="open-modal" data-modal="modal-83" >Ver detalhes</button>
+                </li>
+                <li class="perfume-item" data-genero="masculino" data-familia="floral">
+                    <img src="./imgs/perfumefoto.png" alt="Perfume 1">
+                    <h3>AZARRO</h3>
+                    <p>Valor: R$1740,00. Ocasião: Noite. <br>Tipo: Floral</p>
+                    <button class="open-modal" data-modal="modal-84" >Ver detalhes</button>
+                </li>
+                <li class="perfume-item" data-genero="masculino" data-familia="cítrico">
+                    <img src="./imgs/perfumefoto.png" alt="Perfume 1">
+                    <h3>AZARRO SILVER BLACK</h3>
+                    <p>Valor: R$1760,00. Ocasião: Dia todo. <br>Tipo: Cítrico</p>
+                    <button class="open-modal" data-modal="modal-85" >Ver detalhes</button>
+                </li>
+                <li class="perfume-item" data-genero="feminino" data-familia="amadeirado">
+                    <img src="./imgs/perfumefoto.png" alt="Perfume 1">
+                    <h3>COCO MADEMOISELLE</h3>
+                    <p>Valor: R$1780,00. Ocasião: Noite. <br>Tipo: Amadeirado</p>
+                    <button class="open-modal" data-modal="modal-86" >Ver detalhes</button>
+                </li>
+                <li class="perfume-item" data-genero="masculino" data-familia="floral">
+                    <img src="./imgs/perfumefoto.png" alt="Perfume 1">
+                    <h3>DIOR</h3>
+                    <p>Valor: R$1800,00. Ocasião: Dia todo. <br>Tipo: Floral</p>
+                    <button class="open-modal" data-modal="modal-87" >Ver detalhes</button>
+                </li>
+                <li class="perfume-item" data-genero="masculino" data-familia="cítrico">
+                    <img src="./imgs/perfumefoto.png" alt="Perfume 1">
+                    <h3>DOLCE & GABANNA</h3>
+                    <p>Valor: R$1820,00. Ocasião: Noite. <br>Tipo: Cítrico</p>
+                    <button class="open-modal" data-modal="modal-88" >Ver detalhes</button>
+                </li>
+                <li class="perfume-item" data-genero="masculino" data-familia="amadeirado">
+                    <img src="./imgs/perfumefoto.png" alt="Perfume 1">
+                    <h3>GIVENCHY</h3>
+                    <p>Valor: R$1840,00. Ocasião: Dia todo. <br>Tipo: Amadeirado</p>
+                    <button class="open-modal" data-modal="modal-89" >Ver detalhes</button>
+                </li>
+                <li class="perfume-item" data-genero="masculino" data-familia="floral">
+                    <img src="./imgs/perfumefoto.png" alt="Perfume 1">
+                    <h3>HUGO BOSS</h3>
+                    <p>Valor: R$1860,00. Ocasião: Noite. <br>Tipo: Floral</p>
+                    <button class="open-modal" data-modal="modal-90" >Ver detalhes</button>
+                </li>
+                <li class="perfume-item" data-genero="masculino" data-familia="cítrico">
+                    <img src="./imgs/perfumefoto.png" alt="Perfume 1">
+                    <h3>JEAN PAUL GAUTIER LE MALE</h3>
+                    <p>Valor: R$1880,00. Ocasião: Dia todo. <br>Tipo: Cítrico</p>
+                    <button class="open-modal" data-modal="modal-91" >Ver detalhes</button>
+                </li>
+                <li class="perfume-item" data-genero="masculino" data-familia="amadeirado">
+                    <img src="./imgs/perfumefoto.png" alt="Perfume 1">
+                    <h3>LANCÔME</h3>
+                    <p>Valor: R$1900,00. Ocasião: Noite. <br>Tipo: Amadeirado</p>
+                    <button class="open-modal" data-modal="modal-92" >Ver detalhes</button>
+                </li>
+                <li class="perfume-item" data-genero="masculino" data-familia="floral">
+                    <img src="./imgs/perfumefoto.png" alt="Perfume 1">
+                    <h3>POLO</h3>
+                    <p>Valor: R$1920,00. Ocasião: Dia todo. <br>Tipo: Floral</p>
+                    <button class="open-modal" data-modal="modal-93" >Ver detalhes</button>
+                </li>
+                <li class="perfume-item" data-genero="masculino" data-familia="cítrico">
+                    <img src="./imgs/perfumefoto.png" alt="Perfume 1">
+                    <h3>ROBERTO CAVALLI</h3>
+                    <p>Valor: R$1940,00. Ocasião: Noite. <br>Tipo: Cítrico</p>
+                    <button class="open-modal" data-modal="modal-94" >Ver detalhes</button>
+                </li>
+                <li class="perfume-item" data-genero="masculino" data-familia="amadeirado">
+                    <img src="./imgs/perfumefoto.png" alt="Perfume 1">
+                    <h3>VIKTOR & ROLF</h3>
+                    <p>Valor: R$1960,00. Ocasião: Dia todo. <br>Tipo: Amadeirado</p>
+                    <button class="open-modal" data-modal="modal-95" >Ver detalhes</button>
+                </li>
+                <li class="perfume-item" data-genero="masculino" data-familia="floral">
+                    <img src="./imgs/perfumefoto.png" alt="Perfume 1">
+                    <h3>VINHO PORTO</h3>
+                    <p>Valor: R$1980,00. Ocasião: Noite. <br>Tipo: Floral</p>
+                    <button class="open-modal" data-modal="modal-96" >Ver detalhes</button>
+                </li>
+                <li class="perfume-item" data-genero="masculino" data-familia="cítrico">
+                    <img src="./imgs/perfumefoto.png" alt="Perfume 1">
+                    <h3>YVES SAINT LAURENT</h3>
+                    <p>Valor: R$2000,00. Ocasião: Dia todo. <br>Tipo: Cítrico</p>
+                    <button class="open-modal" data-modal="modal-97" >Ver detalhes</button>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Modals -->
+<div id="modal-1" class="modal-container">
+    <div class="modal">
+        <button class="modal-close"><i class='bx bx-x-circle'></i></button>
+        <div class="modal-content">
+            <img src="./imgs/perfumefoto.png" alt="ABSINTO">
+            <p>Descrição detalhada do perfume ABSINTO.</p>
+            <a href="https://w.app/GioFragrancias" target="_blank"  class="buy-button">Faça já seu pedido</a>
+        </div>
+    </div>
+</div>
+<div id="modal-2" class="modal-container">
+    <div class="modal">
+        <button class="modal-close"><i class='bx bx-x-circle'></i></button>
+        <div class="modal-content">
+            <img src="./imgs/perfumefoto.png" alt="ABSINTO">
+            <p>Descrição detalhada do perfume ABSI.</p>
+            <a href="https://w.app/GioFragrancias" target="_blank"  class="buy-button">Faça já seu pedido</a>
+        </div>
+    </div>
+</div>
+<div id="modal-3" class="modal-container">
+    <div class="modal">
+        <button class="modal-close"><i class='bx bx-x-circle'></i></button>
+        <div class="modal-content">
+            <img src="./imgs/perfumefoto.png" alt="ABSINTO">
+            <p>Descrição detalhada do perfume ABSINTO.</p>
+            <a href="https://w.app/GioFragrancias" target="_blank"  class="buy-button">Faça já seu pedido</a>
+        </div>
+    </div>
+</div>
+<div id="modal-4" class="modal-container">
+    <div class="modal">
+        <button class="modal-close"><i class='bx bx-x-circle'></i></button>
+        <div class="modal-content">
+            <img src="./imgs/perfumefoto.png" alt="ABSINTO">
+            <p>Descrição detalhada do perfume ABSINTO.</p>
+            <a href="https://w.app/GioFragrancias" target="_blank"  class="buy-button">Faça já seu pedido</a>
+        </div>
+    </div>
+</div>
+<div id="modal-5" class="modal-container">
+    <div class="modal">
+        <button class="modal-close"><i class='bx bx-x-circle'></i></button>
+        <div class="modal-content">
+            <img src="./imgs/perfumefoto.png" alt="ABSINTO">
+            <p>Descrição detalhada do perfume ABSINTO.</p>
+            <a href="https://w.app/GioFragrancias" target="_blank"  class="buy-button">Faça já seu pedido</a>
+        </div>
+    </div>
+</div>
+<div id="modal-6" class="modal-container">
+    <div class="modal">
+        <button class="modal-close"><i class='bx bx-x-circle'></i></button>
+        <div class="modal-content">
+            <img src="./imgs/perfumefoto.png" alt="ABSINTO">
+            <p>Descrição detalhada do perfume ABSINTO.</p>
+            <a href="https://w.app/GioFragrancias" target="_blank"  class="buy-button">Faça já seu pedido</a>
+        </div>
+    </div>
+</div>
+<div id="modal-7" class="modal-container">
+    <div class="modal">
+        <button class="modal-close"><i class='bx bx-x-circle'></i></button>
+        <div class="modal-content">
+            <img src="./imgs/perfumefoto.png" alt="ABSINTO">
+            <p>Descrição detalhada do perfume ABSINTO.</p>
+            <a href="https://w.app/GioFragrancias" target="_blank"  class="buy-button">Faça já seu pedido</a>
+        </div>
+    </div>
+</div>
+<div id="modal-8" class="modal-container">
+    <div class="modal">
+        <button class="modal-close"><i class='bx bx-x-circle'></i></button>
+        <div class="modal-content">
+            <img src="./imgs/perfumefoto.png" alt="ABSINTO">
+            <p>Descrição detalhada do perfume ABSINTO.</p>
+            <a href="https://w.app/GioFragrancias" target="_blank"  class="buy-button">Faça já seu pedido</a>
+        </div>
+    </div>
+</div>
+<div id="modal-9" class="modal-container">
+    <div class="modal">
+        <button class="modal-close"><i class='bx bx-x-circle'></i></button>
+        <div class="modal-content">
+            <img src="./imgs/perfumefoto.png" alt="ABSINTO">
+            <p>Descrição detalhada do perfume ABSINTO.</p>
+            <a href="https://w.app/GioFragrancias" target="_blank"  class="buy-button">Faça já seu pedido</a>
+        </div>
+    </div>
+</div>
+<div id="modal-10" class="modal-container">
+    <div class="modal">
+        <button class="modal-close"><i class='bx bx-x-circle'></i></button>
+        <div class="modal-content">
+            <img src="./imgs/perfumefoto.png" alt="ABSINTO">
+            <p>Descrição detalhada do perfume ABSINTO.</p>
+            <a href="https://w.app/GioFragrancias" target="_blank"  class="buy-button">Faça já seu pedido</a>
+        </div>
+    </div>
+</div>
+<div id="modal-11" class="modal-container">
+    <div class="modal">
+        <button class="modal-close"><i class='bx bx-x-circle'></i></button>
+        <div class="modal-content">
+            <img src="./imgs/perfumefoto.png" alt="ABSINTO">
+            <p>Descrição detalhada do perfume ABSINTO.</p>
+            <a href="https://w.app/GioFragrancias" target="_blank"  class="buy-button">Faça já seu pedido</a>
+        </div>
+    </div>
+</div>
+<div id="modal-12" class="modal-container">
+    <div class="modal">
+        <button class="modal-close"><i class='bx bx-x-circle'></i></button>
+        <div class="modal-content">
+            <img src="./imgs/perfumefoto.png" alt="ABSINTO">
+            <p>Descrição detalhada do perfume ABSINTO.</p>
+            <a href="https://w.app/GioFragrancias" target="_blank"  class="buy-button">Faça já seu pedido</a>
+        </div>
+    </div>
+</div>
+<div id="modal-13" class="modal-container">
+    <div class="modal">
+        <button class="modal-close"><i class='bx bx-x-circle'></i></button>
+        <div class="modal-content">
+            <img src="./imgs/perfumefoto.png" alt="ABSINTO">
+            <p>Descrição detalhada do perfume ABSINTO.</p>
+            <a href="https://w.app/GioFragrancias" target="_blank"  class="buy-button">Faça já seu pedido</a>
+        </div>
+    </div>
+</div>
+<div id="modal-14" class="modal-container">
+    <div class="modal">
+        <button class="modal-close"><i class='bx bx-x-circle'></i></button>
+        <div class="modal-content">
+            <img src="./imgs/perfumefoto.png" alt="ABSINTO">
+            <p>Descrição detalhada do perfume ABSINTO.</p>
+            <a href="https://w.app/GioFragrancias" target="_blank"  class="buy-button">Faça já seu pedido</a>
+        </div>
+    </div>
+</div>
+<div id="modal-15" class="modal-container">
+    <div class="modal">
+        <button class="modal-close"><i class='bx bx-x-circle'></i></button>
+        <div class="modal-content">
+            <img src="./imgs/perfumefoto.png" alt="ABSINTO">
+            <p>Descrição detalhada do perfume ABSINTO.</p>
+            <a href="https://w.app/GioFragrancias" target="_blank"  class="buy-button">Faça já seu pedido</a>
+        </div>
+    </div>
+</div>
+<div id="modal-16" class="modal-container">
+    <div class="modal">
+        <button class="modal-close"><i class='bx bx-x-circle'></i></button>
+        <div class="modal-content">
+            <img src="./imgs/perfumefoto.png" alt="ABSINTO">
+            <p>Descrição detalhada do perfume ABSINTO.</p>
+            <a href="https://w.app/GioFragrancias" target="_blank"  class="buy-button">Faça já seu pedido</a>
+        </div>
+    </div>
+</div>
+<div id="modal-17" class="modal-container">
+    <div class="modal">
+        <button class="modal-close"><i class='bx bx-x-circle'></i></button>
+        <div class="modal-content">
+            <img src="./imgs/perfumefoto.png" alt="ABSINTO">
+            <p>Descrição detalhada do perfume ABSINTO.</p>
+            <a href="https://w.app/GioFragrancias" target="_blank"  class="buy-button">Faça já seu pedido</a>
+        </div>
+    </div>
+</div>
+<div id="modal-18" class="modal-container">
+    <div class="modal">
+        <button class="modal-close"><i class='bx bx-x-circle'></i></button>
+        <div class="modal-content">
+            <img src="./imgs/perfumefoto.png" alt="ABSINTO">
+            <p>Descrição detalhada do perfume ABSINTO.</p>
+            <a href="https://w.app/GioFragrancias" target="_blank"  class="buy-button">Faça já seu pedido</a>
+        </div>
+    </div>
+</div>
+<div id="modal-19" class="modal-container">
+    <div class="modal">
+        <button class="modal-close"><i class='bx bx-x-circle'></i></button>
+        <div class="modal-content">
+            <img src="./imgs/perfumefoto.png" alt="ABSINTO">
+            <p>Descrição detalhada do perfume ABSINTO.</p>
+            <a href="https://w.app/GioFragrancias" target="_blank"  class="buy-button">Faça já seu pedido</a>
+        </div>
+    </div>
+</div>
+<div id="modal-20" class="modal-container">
+    <div class="modal">
+        <button class="modal-close"><i class='bx bx-x-circle'></i></button>
+        <div class="modal-content">
+            <img src="./imgs/perfumefoto.png" alt="ABSINTO">
+            <p>Descrição detalhada do perfume ABSINTO.</p>
+            <a href="https://w.app/GioFragrancias" target="_blank"  class="buy-button">Faça já seu pedido</a>
+        </div>
+    </div>
+</div>
+<div id="modal-21" class="modal-container">
+    <div class="modal">
+        <button class="modal-close"><i class='bx bx-x-circle'></i></button>
+        <div class="modal-content">
+            <img src="./imgs/perfumefoto.png" alt="ABSINTO">
+            <p>Descrição detalhada do perfume ABSINTO.</p>
+            <a href="https://w.app/GioFragrancias" target="_blank"  class="buy-button">Faça já seu pedido</a>
+        </div>
+    </div>
+</div>
+<div id="modal-22" class="modal-container">
+    <div class="modal">
+        <button class="modal-close"><i class='bx bx-x-circle'></i></button>
+        <div class="modal-content">
+            <img src="./imgs/perfumefoto.png" alt="ABSINTO">
+            <p>Descrição detalhada do perfume ABSINTO.</p>
+            <a href="https://w.app/GioFragrancias" target="_blank"  class="buy-button">Faça já seu pedido</a>
+        </div>
+    </div>
+</div>
+<div id="modal-23" class="modal-container">
+    <div class="modal">
+        <button class="modal-close"><i class='bx bx-x-circle'></i></button>
+        <div class="modal-content">
+            <img src="./imgs/perfumefoto.png" alt="ABSINTO">
+            <p>Descrição detalhada do perfume ABSINTO.</p>
+            <a href="https://w.app/GioFragrancias" target="_blank"  class="buy-button">Faça já seu pedido</a>
+        </div>
+    </div>
+</div>
+<div id="modal-24" class="modal-container">
+    <div class="modal">
+        <button class="modal-close"><i class='bx bx-x-circle'></i></button>
+        <div class="modal-content">
+            <img src="./imgs/perfumefoto.png" alt="ABSINTO">
+            <p>Descrição detalhada do perfume ABSINTO.</p>
+            <a href="https://w.app/GioFragrancias" target="_blank"  class="buy-button">Faça já seu pedido</a>
+        </div>
+    </div>
+</div>
+<div id="modal-25" class="modal-container">
+    <div class="modal">
+        <button class="modal-close"><i class='bx bx-x-circle'></i></button>
+        <div class="modal-content">
+            <img src="./imgs/perfumefoto.png" alt="ABSINTO">
+            <p>Descrição detalhada do perfume ABSINTO.</p>
+            <a href="https://w.app/GioFragrancias" target="_blank"  class="buy-button">Faça já seu pedido</a>
+        </div>
+    </div>
+</div>
+<div id="modal-26" class="modal-container">
+    <div class="modal">
+        <button class="modal-close"><i class='bx bx-x-circle'></i></button>
+        <div class="modal-content">
+            <img src="./imgs/perfumefoto.png" alt="ABSINTO">
+            <p>Descrição detalhada do perfume ABSINTO.</p>
+            <a href="https://w.app/GioFragrancias" target="_blank"  class="buy-button">Faça já seu pedido</a>
+        </div>
+    </div>
+</div>
+<div id="modal-27" class="modal-container">
+    <div class="modal">
+        <button class="modal-close"><i class='bx bx-x-circle'></i></button>
+        <div class="modal-content">
+            <img src="./imgs/perfumefoto.png" alt="ABSINTO">
+            <p>Descrição detalhada do perfume ABSINTO.</p>
+            <a href="https://w.app/GioFragrancias" target="_blank"  class="buy-button">Faça já seu pedido</a>
+        </div>
+    </div>
+</div>
+<div id="modal-28" class="modal-container">
+    <div class="modal">
+        <button class="modal-close"><i class='bx bx-x-circle'></i></button>
+        <div class="modal-content">
+            <img src="./imgs/perfumefoto.png" alt="ABSINTO">
+            <p>Descrição detalhada do perfume ABSINTO.</p>
+            <a href="https://w.app/GioFragrancias" target="_blank"  class="buy-button">Faça já seu pedido</a>
+        </div>
+    </div>
+</div>
+<div id="modal-29" class="modal-container">
+    <div class="modal">
+        <button class="modal-close"><i class='bx bx-x-circle'></i></button>
+        <div class="modal-content">
+            <img src="./imgs/perfumefoto.png" alt="ABSINTO">
+            <p>Descrição detalhada do perfume ABSINTO.</p>
+            <a href="https://w.app/GioFragrancias" target="_blank"  class="buy-button">Faça já seu pedido</a>
+        </div>
+    </div>
+</div>
+<div id="modal-30" class="modal-container">
+    <div class="modal">
+        <button class="modal-close"><i class='bx bx-x-circle'></i></button>
+        <div class="modal-content">
+            <img src="./imgs/perfumefoto.png" alt="ABSINTO">
+            <p>Descrição detalhada do perfume ABSINTO.</p>
+            <a href="https://w.app/GioFragrancias" target="_blank"  class="buy-button">Faça já seu pedido</a>
+        </div>
+    </div>
+</div>
+<div id="modal-31" class="modal-container">
+    <div class="modal">
+        <button class="modal-close"><i class='bx bx-x-circle'></i></button>
+        <div class="modal-content">
+            <img src="./imgs/perfumefoto.png" alt="ABSINTO">
+            <p>Descrição detalhada do perfume ABSINTO.</p>
+            <a href="https://w.app/GioFragrancias" target="_blank"  class="buy-button">Faça já seu pedido</a>
+        </div>
+    </div>
+</div>
+<div id="modal-32" class="modal-container">
+    <div class="modal">
+        <button class="modal-close"><i class='bx bx-x-circle'></i></button>
+        <div class="modal-content">
+            <img src="./imgs/perfumefoto.png" alt="ABSINTO">
+            <p>Descrição detalhada do perfume ABSINTO.</p>
+            <a href="https://w.app/GioFragrancias" target="_blank"  class="buy-button">Faça já seu pedido</a>
+        </div>
+    </div>
+</div>
+<div id="modal-33" class="modal-container">
+    <div class="modal">
+        <button class="modal-close"><i class='bx bx-x-circle'></i></button>
+        <div class="modal-content">
+            <img src="./imgs/perfumefoto.png" alt="ABSINTO">
+            <p>Descrição detalhada do perfume ABSINTO.</p>
+            <a href="https://w.app/GioFragrancias" target="_blank"  class="buy-button">Faça já seu pedido</a>
+        </div>
+    </div>
+</div>
+<div id="modal-34" class="modal-container">
+    <div class="modal">
+        <button class="modal-close"><i class='bx bx-x-circle'></i></button>
+        <div class="modal-content">
+            <img src="./imgs/perfumefoto.png" alt="ABSINTO">
+            <p>Descrição detalhada do perfume ABSINTO.</p>
+            <a href="https://w.app/GioFragrancias" target="_blank"  class="buy-button">Faça já seu pedido</a>
+        </div>
+    </div>
+</div>
+<div id="modal-35" class="modal-container">
+    <div class="modal">
+        <button class="modal-close"><i class='bx bx-x-circle'></i></button>
+        <div class="modal-content">
+            <img src="./imgs/perfumefoto.png" alt="ABSINTO">
+            <p>Descrição detalhada do perfume ABSINTO.</p>
+            <a href="https://w.app/GioFragrancias" target="_blank"  class="buy-button">Faça já seu pedido</a>
+        </div>
+    </div>
+</div>
+<div id="modal-36" class="modal-container">
+    <div class="modal">
+        <button class="modal-close"><i class='bx bx-x-circle'></i></button>
+        <div class="modal-content">
+            <img src="./imgs/perfumefoto.png" alt="ABSINTO">
+            <p>Descrição detalhada do perfume ABSINTO.</p>
+            <a href="https://w.app/GioFragrancias" target="_blank"  class="buy-button">Faça já seu pedido</a>
+        </div>
+    </div>
+</div>
+<div id="modal-37" class="modal-container">
+    <div class="modal">
+        <button class="modal-close"><i class='bx bx-x-circle'></i></button>
+        <div class="modal-content">
+            <img src="./imgs/perfumefoto.png" alt="ABSINTO">
+            <p>Descrição detalhada do perfume ABSINTO.</p>
+            <a href="https://w.app/GioFragrancias" target="_blank"  class="buy-button">Faça já seu pedido</a>
+        </div>
+    </div>
+</div>
+<div id="modal-38" class="modal-container">
+    <div class="modal">
+        <button class="modal-close"><i class='bx bx-x-circle'></i></button>
+        <div class="modal-content">
+            <img src="./imgs/perfumefoto.png" alt="ABSINTO">
+            <p>Descrição detalhada do perfume ABSINTO.</p>
+            <a href="https://w.app/GioFragrancias" target="_blank"  class="buy-button">Faça já seu pedido</a>
+        </div>
+    </div>
+</div>
+<div id="modal-39" class="modal-container">
+    <div class="modal">
+        <button class="modal-close"><i class='bx bx-x-circle'></i></button>
+        <div class="modal-content">
+            <img src="./imgs/perfumefoto.png" alt="ABSINTO">
+            <p>Descrição detalhada do perfume ABSINTO.</p>
+            <a href="https://w.app/GioFragrancias" target="_blank"  class="buy-button">Faça já seu pedido</a>
+        </div>
+    </div>
+</div>
+<div id="modal-40" class="modal-container">
+    <div class="modal">
+        <button class="modal-close"><i class='bx bx-x-circle'></i></button>
+        <div class="modal-content">
+            <img src="./imgs/perfumefoto.png" alt="ABSINTO">
+            <p>Descrição detalhada do perfume ABSINTO.</p>
+            <a href="https://w.app/GioFragrancias" target="_blank"  class="buy-button">Faça já seu pedido</a>
+        </div>
+    </div>
+</div>
+<div id="modal-41" class="modal-container">
+    <div class="modal">
+        <button class="modal-close"><i class='bx bx-x-circle'></i></button>
+        <div class="modal-content">
+            <img src="./imgs/perfumefoto.png" alt="ABSINTO">
+            <p>Descrição detalhada do perfume ABSINTO.</p>
+            <a href="https://w.app/GioFragrancias" target="_blank"  class="buy-button">Faça já seu pedido</a>
+        </div>
+    </div>
+</div>
+<div id="modal-42" class="modal-container">
+    <div class="modal">
+        <button class="modal-close"><i class='bx bx-x-circle'></i></button>
+        <div class="modal-content">
+            <img src="./imgs/perfumefoto.png" alt="ABSINTO">
+            <p>Descrição detalhada do perfume ABSINTO.</p>
+            <a href="https://w.app/GioFragrancias" target="_blank"  class="buy-button">Faça já seu pedido</a>
+        </div>
+    </div>
+</div>
+<div id="modal-43" class="modal-container">
+    <div class="modal">
+        <button class="modal-close"><i class='bx bx-x-circle'></i></button>
+        <div class="modal-content">
+            <img src="./imgs/perfumefoto.png" alt="ABSINTO">
+            <p>Descrição detalhada do perfume ABSINTO.</p>
+            <a href="https://w.app/GioFragrancias" target="_blank"  class="buy-button">Faça já seu pedido</a>
+        </div>
+    </div>
+</div>
+<div id="modal-44" class="modal-container">
+    <div class="modal">
+        <button class="modal-close"><i class='bx bx-x-circle'></i></button>
+        <div class="modal-content">
+            <img src="./imgs/perfumefoto.png" alt="ABSINTO">
+            <p>Descrição detalhada do perfume ABSINTO.</p>
+            <a href="https://w.app/GioFragrancias" target="_blank"  class="buy-button">Faça já seu pedido</a>
+        </div>
+    </div>
+</div>
+<div id="modal-45" class="modal-container">
+    <div class="modal">
+        <button class="modal-close"><i class='bx bx-x-circle'></i></button>
+        <div class="modal-content">
+            <img src="./imgs/perfumefoto.png" alt="ABSINTO">
+            <p>Descrição detalhada do perfume ABSINTO.</p>
+            <a href="https://w.app/GioFragrancias" target="_blank"  class="buy-button">Faça já seu pedido</a>
+        </div>
+    </div>
+</div>
+<div id="modal-46" class="modal-container">
+    <div class="modal">
+        <button class="modal-close"><i class='bx bx-x-circle'></i></button>
+        <div class="modal-content">
+            <img src="./imgs/perfumefoto.png" alt="ABSINTO">
+            <p>Descrição detalhada do perfume ABSINTO.</p>
+            <a href="https://w.app/GioFragrancias" target="_blank"  class="buy-button">Faça já seu pedido</a>
+        </div>
+    </div>
+</div>
+<div id="modal-47" class="modal-container">
+    <div class="modal">
+        <button class="modal-close"><i class='bx bx-x-circle'></i></button>
+        <div class="modal-content">
+            <img src="./imgs/perfumefoto.png" alt="ABSINTO">
+            <p>Descrição detalhada do perfume ABSINTO.</p>
+            <a href="https://w.app/GioFragrancias" target="_blank"  class="buy-button">Faça já seu pedido</a>
+        </div>
+    </div>
+</div>
+<div id="modal-48" class="modal-container">
+    <div class="modal">
+        <button class="modal-close"><i class='bx bx-x-circle'></i></button>
+        <div class="modal-content">
+            <img src="./imgs/perfumefoto.png" alt="ABSINTO">
+            <p>Descrição detalhada do perfume ABSINTO.</p>
+            <a href="https://w.app/GioFragrancias" target="_blank"  class="buy-button">Faça já seu pedido</a>
+        </div>
+    </div>
+</div>
+<div id="modal-49" class="modal-container">
+    <div class="modal">
+        <button class="modal-close"><i class='bx bx-x-circle'></i></button>
+        <div class="modal-content">
+            <img src="./imgs/perfumefoto.png" alt="ABSINTO">
+            <p>Descrição detalhada do perfume ABSINTO.</p>
+            <a href="https://w.app/GioFragrancias" target="_blank"  class="buy-button">Faça já seu pedido</a>
+        </div>
+    </div>
+</div>
+<div id="modal-50" class="modal-container">
+    <div class="modal">
+        <button class="modal-close"><i class='bx bx-x-circle'></i></button>
+        <div class="modal-content">
+            <img src="./imgs/perfumefoto.png" alt="ABSINTO">
+            <p>Descrição detalhada do perfume ABSINTO.</p>
+            <a href="https://w.app/GioFragrancias" target="_blank"  class="buy-button">Faça já seu pedido</a>
+        </div>
+    </div>
+</div>
+<div id="modal-51" class="modal-container">
+    <div class="modal">
+        <button class="modal-close"><i class='bx bx-x-circle'></i></button>
+        <div class="modal-content">
+            <img src="./imgs/perfumefoto.png" alt="ABSINTO">
+            <p>Descrição detalhada do perfume ABSINTO.</p>
+            <a href="https://w.app/GioFragrancias" target="_blank"  class="buy-button">Faça já seu pedido</a>
+        </div>
+    </div>
+</div>
+<div id="modal-52" class="modal-container">
+    <div class="modal">
+        <button class="modal-close"><i class='bx bx-x-circle'></i></button>
+        <div class="modal-content">
+            <img src="./imgs/perfumefoto.png" alt="ABSINTO">
+            <p>Descrição detalhada do perfume ABSINTO.</p>
+            <a href="https://w.app/GioFragrancias" target="_blank"  class="buy-button">Faça já seu pedido</a>
+        </div>
+    </div>
+</div>
+<div id="modal-53" class="modal-container">
+    <div class="modal">
+        <button class="modal-close"><i class='bx bx-x-circle'></i></button>
+        <div class="modal-content">
+            <img src="./imgs/perfumefoto.png" alt="ABSINTO">
+            <p>Descrição detalhada do perfume ABSINTO.</p>
+            <a href="https://w.app/GioFragrancias" target="_blank"  class="buy-button">Faça já seu pedido</a>
+        </div>
+    </div>
+</div>
+<div id="modal-54" class="modal-container">
+    <div class="modal">
+        <button class="modal-close"><i class='bx bx-x-circle'></i></button>
+        <div class="modal-content">
+            <img src="./imgs/perfumefoto.png" alt="ABSINTO">
+            <p>Descrição detalhada do perfume ABSINTO.</p>
+            <a href="https://w.app/GioFragrancias" target="_blank"  class="buy-button">Faça já seu pedido</a>
+        </div>
+    </div>
+</div>
+<div id="modal-55" class="modal-container">
+    <div class="modal">
+        <button class="modal-close"><i class='bx bx-x-circle'></i></button>
+        <div class="modal-content">
+            <img src="./imgs/perfumefoto.png" alt="ABSINTO">
+            <p>Descrição detalhada do perfume ABSINTO.</p>
+            <a href="https://w.app/GioFragrancias" target="_blank"  class="buy-button">Faça já seu pedido</a>
+        </div>
+    </div>
+</div>
+<div id="modal-56" class="modal-container">
+    <div class="modal">
+        <button class="modal-close"><i class='bx bx-x-circle'></i></button>
+        <div class="modal-content">
+            <img src="./imgs/perfumefoto.png" alt="ABSINTO">
+            <p>Descrição detalhada do perfume ABSINTO.</p>
+            <a href="https://w.app/GioFragrancias" target="_blank"  class="buy-button">Faça já seu pedido</a>
+        </div>
+    </div>
+</div>
+<div id="modal-57" class="modal-container">
+    <div class="modal">
+        <button class="modal-close"><i class='bx bx-x-circle'></i></button>
+        <div class="modal-content">
+            <img src="./imgs/perfumefoto.png" alt="ABSINTO">
+            <p>Descrição detalhada do perfume ABSINTO.</p>
+            <a href="https://w.app/GioFragrancias" target="_blank"  class="buy-button">Faça já seu pedido</a>
+        </div>
+    </div>
+</div>
+<div id="modal-58" class="modal-container">
+    <div class="modal">
+        <button class="modal-close"><i class='bx bx-x-circle'></i></button>
+        <div class="modal-content">
+            <img src="./imgs/perfumefoto.png" alt="ABSINTO">
+            <p>Descrição detalhada do perfume ABSINTO.</p>
+            <a href="https://w.app/GioFragrancias" target="_blank"  class="buy-button">Faça já seu pedido</a>
+        </div>
+    </div>
+</div>
+<div id="modal-59" class="modal-container">
+    <div class="modal">
+        <button class="modal-close"><i class='bx bx-x-circle'></i></button>
+        <div class="modal-content">
+            <img src="./imgs/perfumefoto.png" alt="ABSINTO">
+            <p>Descrição detalhada do perfume ABSINTO.</p>
+            <a href="https://w.app/GioFragrancias" target="_blank"  class="buy-button">Faça já seu pedido</a>
+        </div>
+    </div>
+</div>
+<div id="modal-60" class="modal-container">
+    <div class="modal">
+        <button class="modal-close"><i class='bx bx-x-circle'></i></button>
+        <div class="modal-content">
+            <img src="./imgs/perfumefoto.png" alt="ABSINTO">
+            <p>Descrição detalhada do perfume ABSINTO.</p>
+            <a href="https://w.app/GioFragrancias" target="_blank"  class="buy-button">Faça já seu pedido</a>
+        </div>
+    </div>
+</div>
+<div id="modal-61" class="modal-container">
+    <div class="modal">
+        <button class="modal-close"><i class='bx bx-x-circle'></i></button>
+        <div class="modal-content">
+            <img src="./imgs/perfumefoto.png" alt="ABSINTO">
+            <p>Descrição detalhada do perfume ABSINTO.</p>
+            <a href="https://w.app/GioFragrancias" target="_blank"  class="buy-button">Faça já seu pedido</a>
+        </div>
+    </div>
+</div>
+<div id="modal-62" class="modal-container">
+    <div class="modal">
+        <button class="modal-close"><i class='bx bx-x-circle'></i></button>
+        <div class="modal-content">
+            <img src="./imgs/perfumefoto.png" alt="ABSINTO">
+            <p>Descrição detalhada do perfume ABSINTO.</p>
+            <a href="https://w.app/GioFragrancias" target="_blank"  class="buy-button">Faça já seu pedido</a>
+        </div>
+    </div>
+</div>
+<div id="modal-63" class="modal-container">
+    <div class="modal">
+        <button class="modal-close"><i class='bx bx-x-circle'></i></button>
+        <div class="modal-content">
+            <img src="./imgs/perfumefoto.png" alt="ABSINTO">
+            <p>Descrição detalhada do perfume ABSINTO.</p>
+            <a href="https://w.app/GioFragrancias" target="_blank"  class="buy-button">Faça já seu pedido</a>
+        </div>
+    </div>
+</div>
+<div id="modal-64" class="modal-container">
+    <div class="modal">
+        <button class="modal-close"><i class='bx bx-x-circle'></i></button>
+        <div class="modal-content">
+            <img src="./imgs/perfumefoto.png" alt="ABSINTO">
+            <p>Descrição detalhada do perfume ABSINTO.</p>
+            <a href="https://w.app/GioFragrancias" target="_blank"  class="buy-button">Faça já seu pedido</a>
+        </div>
+    </div>
+</div>
+<div id="modal-65" class="modal-container">
+    <div class="modal">
+        <button class="modal-close"><i class='bx bx-x-circle'></i></button>
+        <div class="modal-content">
+            <img src="./imgs/perfumefoto.png" alt="ABSINTO">
+            <p>Descrição detalhada do perfume ABSINTO.</p>
+            <a href="https://w.app/GioFragrancias" target="_blank"  class="buy-button">Faça já seu pedido</a>
+        </div>
+    </div>
+</div>
+<div id="modal-66" class="modal-container">
+    <div class="modal">
+        <button class="modal-close"><i class='bx bx-x-circle'></i></button>
+        <div class="modal-content">
+            <img src="./imgs/perfumefoto.png" alt="ABSINTO">
+            <p>Descrição detalhada do perfume ABSINTO.</p>
+            <a href="https://w.app/GioFragrancias" target="_blank"  class="buy-button">Faça já seu pedido</a>
+        </div>
+    </div>
+</div>
+<div id="modal-67" class="modal-container">
+    <div class="modal">
+        <button class="modal-close"><i class='bx bx-x-circle'></i></button>
+        <div class="modal-content">
+            <img src="./imgs/perfumefoto.png" alt="ABSINTO">
+            <p>Descrição detalhada do perfume ABSINTO.</p>
+            <a href="https://w.app/GioFragrancias" target="_blank"  class="buy-button">Faça já seu pedido</a>
+        </div>
+    </div>
+</div>
+<div id="modal-68" class="modal-container">
+    <div class="modal">
+        <button class="modal-close"><i class='bx bx-x-circle'></i></button>
+        <div class="modal-content">
+            <img src="./imgs/perfumefoto.png" alt="ABSINTO">
+            <p>Descrição detalhada do perfume ABSINTO.</p>
+            <a href="https://w.app/GioFragrancias" target="_blank"  class="buy-button">Faça já seu pedido</a>
+        </div>
+    </div>
+</div>
+<div id="modal-69" class="modal-container">
+    <div class="modal">
+        <button class="modal-close"><i class='bx bx-x-circle'></i></button>
+        <div class="modal-content">
+            <img src="./imgs/perfumefoto.png" alt="ABSINTO">
+            <p>Descrição detalhada do perfume ABSINTO.</p>
+            <a href="https://w.app/GioFragrancias" target="_blank"  class="buy-button">Faça já seu pedido</a>
+        </div>
+    </div>
+</div>
+<div id="modal-70" class="modal-container">
+    <div class="modal">
+        <button class="modal-close"><i class='bx bx-x-circle'></i></button>
+        <div class="modal-content">
+            <img src="./imgs/perfumefoto.png" alt="ABSINTO">
+            <p>Descrição detalhada do perfume ABSINTO.</p>
+            <a href="https://w.app/GioFragrancias" target="_blank"  class="buy-button">Faça já seu pedido</a>
+        </div>
+    </div>
+</div>
+<div id="modal-71" class="modal-container">
+    <div class="modal">
+        <button class="modal-close"><i class='bx bx-x-circle'></i></button>
+        <div class="modal-content">
+            <img src="./imgs/perfumefoto.png" alt="ABSINTO">
+            <p>Descrição detalhada do perfume ABSINTO.</p>
+            <a href="https://w.app/GioFragrancias" target="_blank"  class="buy-button">Faça já seu pedido</a>
+        </div>
+    </div>
+</div>
+<div id="modal-72" class="modal-container">
+    <div class="modal">
+        <button class="modal-close"><i class='bx bx-x-circle'></i></button>
+        <div class="modal-content">
+            <img src="./imgs/perfumefoto.png" alt="ABSINTO">
+            <p>Descrição detalhada do perfume ABSINTO.</p>
+            <a href="https://w.app/GioFragrancias" target="_blank"  class="buy-button">Faça já seu pedido</a>
+        </div>
+    </div>
+</div>
+<div id="modal-73" class="modal-container">
+    <div class="modal">
+        <button class="modal-close"><i class='bx bx-x-circle'></i></button>
+        <div class="modal-content">
+            <img src="./imgs/perfumefoto.png" alt="ABSINTO">
+            <p>Descrição detalhada do perfume ABSINTO.</p>
+            <a href="https://w.app/GioFragrancias" target="_blank"  class="buy-button">Faça já seu pedido</a>
+        </div>
+    </div>
+</div>
+<div id="modal-74" class="modal-container">
+    <div class="modal">
+        <button class="modal-close"><i class='bx bx-x-circle'></i></button>
+        <div class="modal-content">
+            <img src="./imgs/perfumefoto.png" alt="ABSINTO">
+            <p>Descrição detalhada do perfume ABSINTO.</p>
+            <a href="https://w.app/GioFragrancias" target="_blank"  class="buy-button">Faça já seu pedido</a>
+        </div>
+    </div>
+</div>
+<div id="modal-75" class="modal-container">
+    <div class="modal">
+        <button class="modal-close"><i class='bx bx-x-circle'></i></button>
+        <div class="modal-content">
+            <img src="./imgs/perfumefoto.png" alt="ABSINTO">
+            <p>Descrição detalhada do perfume ABSINTO.</p>
+            <a href="https://w.app/GioFragrancias" target="_blank"  class="buy-button">Faça já seu pedido</a>
+        </div>
+    </div>
+</div>
+<div id="modal-76" class="modal-container">
+    <div class="modal">
+        <button class="modal-close"><i class='bx bx-x-circle'></i></button>
+        <div class="modal-content">
+            <img src="./imgs/perfumefoto.png" alt="ABSINTO">
+            <p>Descrição detalhada do perfume ABSINTO.</p>
+            <a href="https://w.app/GioFragrancias" target="_blank"  class="buy-button">Faça já seu pedido</a>
+        </div>
+    </div>
+</div>
+<div id="modal-77" class="modal-container">
+    <div class="modal">
+        <button class="modal-close"><i class='bx bx-x-circle'></i></button>
+        <div class="modal-content">
+            <img src="./imgs/perfumefoto.png" alt="ABSINTO">
+            <p>Descrição detalhada do perfume ABSINTO.</p>
+            <a href="https://w.app/GioFragrancias" target="_blank"  class="buy-button">Faça já seu pedido</a>
+        </div>
+    </div>
+</div>
+<div id="modal-78" class="modal-container">
+    <div class="modal">
+        <button class="modal-close"><i class='bx bx-x-circle'></i></button>
+        <div class="modal-content">
+            <img src="./imgs/perfumefoto.png" alt="ABSINTO">
+            <p>Descrição detalhada do perfume ABSINTO.</p>
+            <a href="https://w.app/GioFragrancias" target="_blank"  class="buy-button">Faça já seu pedido</a>
+        </div>
+    </div>
+</div>
+<div id="modal-79" class="modal-container">
+    <div class="modal">
+        <button class="modal-close"><i class='bx bx-x-circle'></i></button>
+        <div class="modal-content">
+            <img src="./imgs/perfumefoto.png" alt="ABSINTO">
+            <p>Descrição detalhada do perfume ABSINTO.</p>
+            <a href="https://w.app/GioFragrancias" target="_blank"  class="buy-button">Faça já seu pedido</a>
+        </div>
+    </div>
+</div>
+<div id="modal-80" class="modal-container">
+    <div class="modal">
+        <button class="modal-close"><i class='bx bx-x-circle'></i></button>
+        <div class="modal-content">
+            <img src="./imgs/perfumefoto.png" alt="ABSINTO">
+            <p>Descrição detalhada do perfume ABSINTO.</p>
+            <a href="https://w.app/GioFragrancias" target="_blank"  class="buy-button">Faça já seu pedido</a>
+        </div>
+    </div>
+</div>
+<div id="modal-81" class="modal-container">
+    <div class="modal">
+        <button class="modal-close"><i class='bx bx-x-circle'></i></button>
+        <div class="modal-content">
+            <img src="./imgs/perfumefoto.png" alt="ABSINTO">
+            <p>Descrição detalhada do perfume ABSINTO.</p>
+            <a href="https://w.app/GioFragrancias" target="_blank"  class="buy-button">Faça já seu pedido</a>
+        </div>
+    </div>
+</div>
+<div id="modal-82" class="modal-container">
+    <div class="modal">
+        <button class="modal-close"><i class='bx bx-x-circle'></i></button>
+        <div class="modal-content">
+            <img src="./imgs/perfumefoto.png" alt="ABSINTO">
+            <p>Descrição detalhada do perfume ABSINTO.</p>
+            <a href="https://w.app/GioFragrancias" target="_blank"  class="buy-button">Faça já seu pedido</a>
+        </div>
+    </div>
+</div>
+<div id="modal-83" class="modal-container">
+    <div class="modal">
+        <button class="modal-close"><i class='bx bx-x-circle'></i></button>
+        <div class="modal-content">
+            <img src="./imgs/perfumefoto.png" alt="ABSINTO">
+            <p>Descrição detalhada do perfume ABSINTO.</p>
+            <a href="https://w.app/GioFragrancias" target="_blank"  class="buy-button">Faça já seu pedido</a>
+        </div>
+    </div>
+</div>
+<div id="modal-84" class="modal-container">
+    <div class="modal">
+        <button class="modal-close"><i class='bx bx-x-circle'></i></button>
+        <div class="modal-content">
+            <img src="./imgs/perfumefoto.png" alt="ABSINTO">
+            <p>Descrição detalhada do perfume ABSINTO.</p>
+            <a href="https://w.app/GioFragrancias" target="_blank"  class="buy-button">Faça já seu pedido</a>
+        </div>
+    </div>
+</div>
+<div id="modal-85" class="modal-container">
+    <div class="modal">
+        <button class="modal-close"><i class='bx bx-x-circle'></i></button>
+        <div class="modal-content">
+            <img src="./imgs/perfumefoto.png" alt="ABSINTO">
+            <p>Descrição detalhada do perfume ABSINTO.</p>
+            <a href="https://w.app/GioFragrancias" target="_blank"  class="buy-button">Faça já seu pedido</a>
+        </div>
+    </div>
+</div>
+<div id="modal-86" class="modal-container">
+    <div class="modal">
+        <button class="modal-close"><i class='bx bx-x-circle'></i></button>
+        <div class="modal-content">
+            <img src="./imgs/perfumefoto.png" alt="ABSINTO">
+            <p>Descrição detalhada do perfume ABSINTO.</p>
+            <a href="https://w.app/GioFragrancias" target="_blank"  class="buy-button">Faça já seu pedido</a>
+        </div>
+    </div>
+</div>
+<div id="modal-87" class="modal-container">
+    <div class="modal">
+        <button class="modal-close"><i class='bx bx-x-circle'></i></button>
+        <div class="modal-content">
+            <img src="./imgs/perfumefoto.png" alt="ABSINTO">
+            <p>Descrição detalhada do perfume ABSINTO.</p>
+            <a href="https://w.app/GioFragrancias" target="_blank"  class="buy-button">Faça já seu pedido</a>
+        </div>
+    </div>
+</div>
+<div id="modal-88" class="modal-container">
+    <div class="modal">
+        <button class="modal-close"><i class='bx bx-x-circle'></i></button>
+        <div class="modal-content">
+            <img src="./imgs/perfumefoto.png" alt="ABSINTO">
+            <p>Descrição detalhada do perfume ABSINTO.</p>
+            <a href="https://w.app/GioFragrancias" target="_blank"  class="buy-button">Faça já seu pedido</a>
+        </div>
+    </div>
+</div>
+<div id="modal-89" class="modal-container">
+    <div class="modal">
+        <button class="modal-close"><i class='bx bx-x-circle'></i></button>
+        <div class="modal-content">
+            <img src="./imgs/perfumefoto.png" alt="ABSINTO">
+            <p>Descrição detalhada do perfume ABSINTO.</p>
+            <a href="https://w.app/GioFragrancias" target="_blank"  class="buy-button">Faça já seu pedido</a>
+        </div>
+    </div>
+</div>
+<div id="modal-90" class="modal-container">
+    <div class="modal">
+        <button class="modal-close"><i class='bx bx-x-circle'></i></button>
+        <div class="modal-content">
+            <img src="./imgs/perfumefoto.png" alt="ABSINTO">
+            <p>Descrição detalhada do perfume ABSINTO.</p>
+            <a href="https://w.app/GioFragrancias" target="_blank"  class="buy-button">Faça já seu pedido</a>
+        </div>
+    </div>
+</div>
+<div id="modal-91" class="modal-container">
+    <div class="modal">
+        <button class="modal-close"><i class='bx bx-x-circle'></i></button>
+        <div class="modal-content">
+            <img src="./imgs/perfumefoto.png" alt="ABSINTO">
+            <p>Descrição detalhada do perfume ABSINTO.</p>
+            <a href="https://w.app/GioFragrancias" target="_blank"  class="buy-button">Faça já seu pedido</a>
+        </div>
+    </div>
+</div>
+<div id="modal-92" class="modal-container">
+    <div class="modal">
+        <button class="modal-close"><i class='bx bx-x-circle'></i></button>
+        <div class="modal-content">
+            <img src="./imgs/perfumefoto.png" alt="ABSINTO">
+            <p>Descrição detalhada do perfume ABSINTO.</p>
+            <a href="https://w.app/GioFragrancias" target="_blank"  class="buy-button">Faça já seu pedido</a>
+        </div>
+    </div>
+</div>
+<div id="modal-93" class="modal-container">
+    <div class="modal">
+        <button class="modal-close"><i class='bx bx-x-circle'></i></button>
+        <div class="modal-content">
+            <img src="./imgs/perfumefoto.png" alt="ABSINTO">
+            <p>Descrição detalhada do perfume ABSINTO.</p>
+            <a href="https://w.app/GioFragrancias" target="_blank"  class="buy-button">Faça já seu pedido</a>
+        </div>
+    </div>
+</div>
+<div id="modal-94" class="modal-container">
+    <div class="modal">
+        <button class="modal-close"><i class='bx bx-x-circle'></i></button>
+        <div class="modal-content">
+            <img src="./imgs/perfumefoto.png" alt="ABSINTO">
+            <p>Descrição detalhada do perfume ABSINTO.</p>
+            <a href="https://w.app/GioFragrancias" target="_blank"  class="buy-button">Faça já seu pedido</a>
+        </div>
+    </div>
+</div>
+<div id="modal-95" class="modal-container">
+    <div class="modal">
+        <button class="modal-close"><i class='bx bx-x-circle'></i></button>
+        <div class="modal-content">
+            <img src="./imgs/perfumefoto.png" alt="ABSINTO">
+            <p>Descrição detalhada do perfume ABSINTO.</p>
+            <a href="https://w.app/GioFragrancias" target="_blank"  class="buy-button">Faça já seu pedido</a>
+        </div>
+    </div>
+</div>
+<div id="modal-96" class="modal-container">
+    <div class="modal">
+        <button class="modal-close"><i class='bx bx-x-circle'></i></button>
+        <div class="modal-content">
+            <img src="./imgs/perfumefoto.png" alt="ABSINTO">
+            <p>Descrição detalhada do perfume ABSINTO.</p>
+            <a href="https://w.app/GioFragrancias" target="_blank"  class="buy-button">Faça já seu pedido</a>
+        </div>
+    </div>
+</div>
+<div id="modal-97" class="modal-container">
+    <div class="modal">
+        <button class="modal-close"><i class='bx bx-x-circle'></i></button>
+        <div class="modal-content">
+            <img src="./imgs/perfumefoto.png" alt="ABSINTO">
+            <p>Descrição detalhada do perfume ABSINTO.</p>
+            <a href="https://w.app/GioFragrancias" target="_blank"  class="buy-button">Faça já seu pedido</a>
+        </div>
+    </div>
+</div>
+
+<!-- Direito autorais -->
+    <footer class="footer">
+        <div class="footer-text">
+            <p>Direitos autorais &copy;; 2024 Giovanna Elisa J. Ramiro | Todos os direitos reservados <i
+                    class='bx bxs-store-alt'></i></p>
+        </div>
+    </footer>
+
+
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
