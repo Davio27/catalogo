@@ -245,6 +245,7 @@ body {
 .dropdown-content button {
     border-radius: 10px;
     background-color: transparent;
+    color: var(--bg-color);
     cursor: pointer;
     padding: 12px 16px;
     display: block;
